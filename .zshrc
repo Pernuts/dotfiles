@@ -28,6 +28,7 @@ setopt auto_cd
 # エイリアス
 setopt complete_aliases
 
+alias vim='vim -u ~/.vim/.vimrc'
 alias -g L='| less'
 alias -g G='| grep'
 alias ls='ls --color=auto --hide="ntuser.dat*" --hide="NTUSER.DAT*"'
@@ -41,7 +42,7 @@ SAVEHIST=50000
 setopt hist_ignore_dups
 setopt share_history
 # コマンド履歴の検索
-autoload history-search-end
+autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
